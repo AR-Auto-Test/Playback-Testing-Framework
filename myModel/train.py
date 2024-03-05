@@ -1,5 +1,5 @@
 from models import *
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, random_split
 import torch
 import time
 import datetime
@@ -26,12 +26,16 @@ def main():
     # Create DataLoader
     #transform = Compose([Resize((224, 224)), ToTensor()])
     dataset = VideoDataset(video_path, metadata_path)
-    dataloader = DataLoader(dataset, batch_size=4, shuffle=True)
+    train_size = int(0.7 * len(dataset))
+    val_size = len(dataset) - train_size
+    train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
+    train_dataloader = DataLoader(train_dataset, batch_size=2, shuffle=True)
+    val_dataloader = DataLoader(val_dataset, batch_size=2, shuffle=False)
 
     # Training model
-    train_model(model, dataloader, criterion, optimizer)
+    train_model(model, train_dataloader, val_dataloader, criterion, optimizer)
 
-def train_model(model, train_dataloader, val_dataloader, criterion, optimizer, num_epochs=25):
+def train_model(model, train_dataloader, val_dataloader, criterion, optimizer, num_epochs=5):
     best_accuracy = 0.0
     for epoch in range(num_epochs):
         for frames, metadata, labels in train_dataloader:
