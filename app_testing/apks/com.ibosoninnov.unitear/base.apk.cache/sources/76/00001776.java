@@ -1,0 +1,340 @@
+package com.google.android.material.dialog;
+
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
+import android.database.Cursor;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.util.TypedValue;
+import android.view.View;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ListAdapter;
+import b.b.c.g;
+import b.b.g.c;
+import b.j.j.q;
+import com.google.android.material.R;
+import com.google.android.material.color.MaterialColors;
+import com.google.android.material.internal.StaticLayoutBuilderCompat;
+import com.google.android.material.resources.MaterialAttributes;
+import com.google.android.material.shape.MaterialShapeDrawable;
+import com.google.android.material.theme.overlay.MaterialThemeOverlay;
+import java.util.concurrent.atomic.AtomicInteger;
+
+/* loaded from: classes.dex */
+public class MaterialAlertDialogBuilder extends g.a {
+    private static final int DEF_STYLE_ATTR = R.attr.alertDialogStyle;
+    private static final int DEF_STYLE_RES = R.style.MaterialAlertDialog_MaterialComponents;
+    private static final int MATERIAL_ALERT_DIALOG_THEME_OVERLAY = R.attr.materialAlertDialogTheme;
+    private Drawable background;
+    private final Rect backgroundInsets;
+
+    public MaterialAlertDialogBuilder(Context context) {
+        this(context, 0);
+    }
+
+    private static Context createMaterialAlertDialogThemedContext(Context context) {
+        int materialAlertDialogThemeOverlay = getMaterialAlertDialogThemeOverlay(context);
+        Context wrap = MaterialThemeOverlay.wrap(context, null, DEF_STYLE_ATTR, DEF_STYLE_RES);
+        return materialAlertDialogThemeOverlay == 0 ? wrap : new c(wrap, materialAlertDialogThemeOverlay);
+    }
+
+    private static int getMaterialAlertDialogThemeOverlay(Context context) {
+        TypedValue resolve = MaterialAttributes.resolve(context, MATERIAL_ALERT_DIALOG_THEME_OVERLAY);
+        if (resolve == null) {
+            return 0;
+        }
+        return resolve.data;
+    }
+
+    private static int getOverridingThemeResId(Context context, int i) {
+        return i == 0 ? getMaterialAlertDialogThemeOverlay(context) : i;
+    }
+
+    @Override // b.b.c.g.a
+    public g create() {
+        g create = super.create();
+        Window window = create.getWindow();
+        View decorView = window.getDecorView();
+        Drawable drawable = this.background;
+        if (drawable instanceof MaterialShapeDrawable) {
+            AtomicInteger atomicInteger = q.f2214a;
+            ((MaterialShapeDrawable) drawable).setElevation(decorView.getElevation());
+        }
+        window.setBackgroundDrawable(MaterialDialogs.insetDrawable(this.background, this.backgroundInsets));
+        decorView.setOnTouchListener(new InsetDialogOnTouchListener(create, this.backgroundInsets));
+        return create;
+    }
+
+    public Drawable getBackground() {
+        return this.background;
+    }
+
+    public MaterialAlertDialogBuilder setBackground(Drawable drawable) {
+        this.background = drawable;
+        return this;
+    }
+
+    public MaterialAlertDialogBuilder setBackgroundInsetBottom(int i) {
+        this.backgroundInsets.bottom = i;
+        return this;
+    }
+
+    public MaterialAlertDialogBuilder setBackgroundInsetEnd(int i) {
+        if (getContext().getResources().getConfiguration().getLayoutDirection() == 1) {
+            this.backgroundInsets.left = i;
+        } else {
+            this.backgroundInsets.right = i;
+        }
+        return this;
+    }
+
+    public MaterialAlertDialogBuilder setBackgroundInsetStart(int i) {
+        if (getContext().getResources().getConfiguration().getLayoutDirection() == 1) {
+            this.backgroundInsets.right = i;
+        } else {
+            this.backgroundInsets.left = i;
+        }
+        return this;
+    }
+
+    public MaterialAlertDialogBuilder setBackgroundInsetTop(int i) {
+        this.backgroundInsets.top = i;
+        return this;
+    }
+
+    public MaterialAlertDialogBuilder(Context context, int i) {
+        super(createMaterialAlertDialogThemedContext(context), getOverridingThemeResId(context, i));
+        Context context2 = getContext();
+        Resources.Theme theme = context2.getTheme();
+        int i2 = DEF_STYLE_ATTR;
+        int i3 = DEF_STYLE_RES;
+        this.backgroundInsets = MaterialDialogs.getDialogBackgroundInsets(context2, i2, i3);
+        int color = MaterialColors.getColor(context2, R.attr.colorSurface, getClass().getCanonicalName());
+        MaterialShapeDrawable materialShapeDrawable = new MaterialShapeDrawable(context2, null, i2, i3);
+        materialShapeDrawable.initializeElevationOverlay(context2);
+        materialShapeDrawable.setFillColor(ColorStateList.valueOf(color));
+        if (Build.VERSION.SDK_INT >= 28) {
+            TypedValue typedValue = new TypedValue();
+            theme.resolveAttribute(16844145, typedValue, true);
+            float dimension = typedValue.getDimension(getContext().getResources().getDisplayMetrics());
+            if (typedValue.type == 5 && dimension >= StaticLayoutBuilderCompat.DEFAULT_LINE_SPACING_ADD) {
+                materialShapeDrawable.setCornerSize(dimension);
+            }
+        }
+        this.background = materialShapeDrawable;
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setAdapter(ListAdapter listAdapter, DialogInterface.OnClickListener onClickListener) {
+        return (MaterialAlertDialogBuilder) super.setAdapter(listAdapter, onClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setCancelable(boolean z) {
+        return (MaterialAlertDialogBuilder) super.setCancelable(z);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setCursor(Cursor cursor, DialogInterface.OnClickListener onClickListener, String str) {
+        return (MaterialAlertDialogBuilder) super.setCursor(cursor, onClickListener, str);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setCustomTitle(View view) {
+        return (MaterialAlertDialogBuilder) super.setCustomTitle(view);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setIconAttribute(int i) {
+        return (MaterialAlertDialogBuilder) super.setIconAttribute(i);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setNegativeButtonIcon(Drawable drawable) {
+        return (MaterialAlertDialogBuilder) super.setNegativeButtonIcon(drawable);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setNeutralButtonIcon(Drawable drawable) {
+        return (MaterialAlertDialogBuilder) super.setNeutralButtonIcon(drawable);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setOnCancelListener(DialogInterface.OnCancelListener onCancelListener) {
+        return (MaterialAlertDialogBuilder) super.setOnCancelListener(onCancelListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setOnDismissListener(DialogInterface.OnDismissListener onDismissListener) {
+        return (MaterialAlertDialogBuilder) super.setOnDismissListener(onDismissListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setOnItemSelectedListener(AdapterView.OnItemSelectedListener onItemSelectedListener) {
+        return (MaterialAlertDialogBuilder) super.setOnItemSelectedListener(onItemSelectedListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setOnKeyListener(DialogInterface.OnKeyListener onKeyListener) {
+        return (MaterialAlertDialogBuilder) super.setOnKeyListener(onKeyListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setPositiveButtonIcon(Drawable drawable) {
+        return (MaterialAlertDialogBuilder) super.setPositiveButtonIcon(drawable);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setIcon(int i) {
+        return (MaterialAlertDialogBuilder) super.setIcon(i);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setItems(int i, DialogInterface.OnClickListener onClickListener) {
+        return (MaterialAlertDialogBuilder) super.setItems(i, onClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setMessage(int i) {
+        return (MaterialAlertDialogBuilder) super.setMessage(i);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setNegativeButton(int i, DialogInterface.OnClickListener onClickListener) {
+        return (MaterialAlertDialogBuilder) super.setNegativeButton(i, onClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setNeutralButton(int i, DialogInterface.OnClickListener onClickListener) {
+        return (MaterialAlertDialogBuilder) super.setNeutralButton(i, onClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setPositiveButton(int i, DialogInterface.OnClickListener onClickListener) {
+        return (MaterialAlertDialogBuilder) super.setPositiveButton(i, onClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setTitle(int i) {
+        return (MaterialAlertDialogBuilder) super.setTitle(i);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setView(int i) {
+        return (MaterialAlertDialogBuilder) super.setView(i);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setIcon(Drawable drawable) {
+        return (MaterialAlertDialogBuilder) super.setIcon(drawable);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setItems(CharSequence[] charSequenceArr, DialogInterface.OnClickListener onClickListener) {
+        return (MaterialAlertDialogBuilder) super.setItems(charSequenceArr, onClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setMessage(CharSequence charSequence) {
+        return (MaterialAlertDialogBuilder) super.setMessage(charSequence);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setMultiChoiceItems(int i, boolean[] zArr, DialogInterface.OnMultiChoiceClickListener onMultiChoiceClickListener) {
+        return (MaterialAlertDialogBuilder) super.setMultiChoiceItems(i, zArr, onMultiChoiceClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setNegativeButton(CharSequence charSequence, DialogInterface.OnClickListener onClickListener) {
+        return (MaterialAlertDialogBuilder) super.setNegativeButton(charSequence, onClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setNeutralButton(CharSequence charSequence, DialogInterface.OnClickListener onClickListener) {
+        return (MaterialAlertDialogBuilder) super.setNeutralButton(charSequence, onClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setPositiveButton(CharSequence charSequence, DialogInterface.OnClickListener onClickListener) {
+        return (MaterialAlertDialogBuilder) super.setPositiveButton(charSequence, onClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setTitle(CharSequence charSequence) {
+        return (MaterialAlertDialogBuilder) super.setTitle(charSequence);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setView(View view) {
+        return (MaterialAlertDialogBuilder) super.setView(view);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setMultiChoiceItems(CharSequence[] charSequenceArr, boolean[] zArr, DialogInterface.OnMultiChoiceClickListener onMultiChoiceClickListener) {
+        return (MaterialAlertDialogBuilder) super.setMultiChoiceItems(charSequenceArr, zArr, onMultiChoiceClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setSingleChoiceItems(int i, int i2, DialogInterface.OnClickListener onClickListener) {
+        return (MaterialAlertDialogBuilder) super.setSingleChoiceItems(i, i2, onClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setMultiChoiceItems(Cursor cursor, String str, String str2, DialogInterface.OnMultiChoiceClickListener onMultiChoiceClickListener) {
+        return (MaterialAlertDialogBuilder) super.setMultiChoiceItems(cursor, str, str2, onMultiChoiceClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setSingleChoiceItems(Cursor cursor, int i, String str, DialogInterface.OnClickListener onClickListener) {
+        return (MaterialAlertDialogBuilder) super.setSingleChoiceItems(cursor, i, str, onClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setSingleChoiceItems(CharSequence[] charSequenceArr, int i, DialogInterface.OnClickListener onClickListener) {
+        return (MaterialAlertDialogBuilder) super.setSingleChoiceItems(charSequenceArr, i, onClickListener);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // b.b.c.g.a
+    public MaterialAlertDialogBuilder setSingleChoiceItems(ListAdapter listAdapter, int i, DialogInterface.OnClickListener onClickListener) {
+        return (MaterialAlertDialogBuilder) super.setSingleChoiceItems(listAdapter, i, onClickListener);
+    }
+}

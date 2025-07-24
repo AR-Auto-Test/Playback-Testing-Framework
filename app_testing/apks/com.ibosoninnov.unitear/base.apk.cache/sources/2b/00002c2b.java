@@ -1,0 +1,120 @@
+package com.google.protobuf;
+
+import com.google.protobuf.UnknownFieldSet;
+
+/* loaded from: classes2.dex */
+public class UnknownFieldSetSchema extends UnknownFieldSchema<UnknownFieldSet, UnknownFieldSet.Builder> {
+    private final boolean proto3;
+
+    public UnknownFieldSetSchema(boolean z) {
+        this.proto3 = z;
+    }
+
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public void makeImmutable(Object obj) {
+    }
+
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public boolean shouldDiscardUnknownFields(Reader reader) {
+        return reader.shouldDiscardUnknownFields();
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public void addFixed32(UnknownFieldSet.Builder builder, int i, int i2) {
+        builder.mergeField(i, UnknownFieldSet.Field.newBuilder().addFixed32(i2).build());
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public void addFixed64(UnknownFieldSet.Builder builder, int i, long j) {
+        builder.mergeField(i, UnknownFieldSet.Field.newBuilder().addFixed64(j).build());
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public void addGroup(UnknownFieldSet.Builder builder, int i, UnknownFieldSet unknownFieldSet) {
+        builder.mergeField(i, UnknownFieldSet.Field.newBuilder().addGroup(unknownFieldSet).build());
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public void addLengthDelimited(UnknownFieldSet.Builder builder, int i, ByteString byteString) {
+        builder.mergeField(i, UnknownFieldSet.Field.newBuilder().addLengthDelimited(byteString).build());
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public void addVarint(UnknownFieldSet.Builder builder, int i, long j) {
+        builder.mergeField(i, UnknownFieldSet.Field.newBuilder().addVarint(j).build());
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public UnknownFieldSet.Builder getBuilderFromMessage(Object obj) {
+        return ((GeneratedMessageV3) obj).unknownFields.toBuilder();
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public UnknownFieldSet getFromMessage(Object obj) {
+        return ((GeneratedMessageV3) obj).unknownFields;
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public int getSerializedSize(UnknownFieldSet unknownFieldSet) {
+        return unknownFieldSet.getSerializedSize();
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public int getSerializedSizeAsMessageSet(UnknownFieldSet unknownFieldSet) {
+        return unknownFieldSet.getSerializedSizeAsMessageSet();
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public UnknownFieldSet merge(UnknownFieldSet unknownFieldSet, UnknownFieldSet unknownFieldSet2) {
+        return unknownFieldSet.toBuilder().mergeFrom(unknownFieldSet2).build();
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public UnknownFieldSet.Builder newBuilder() {
+        return UnknownFieldSet.newBuilder();
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public void setBuilderToMessage(Object obj, UnknownFieldSet.Builder builder) {
+        ((GeneratedMessageV3) obj).unknownFields = builder.build();
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public void setToMessage(Object obj, UnknownFieldSet unknownFieldSet) {
+        ((GeneratedMessageV3) obj).unknownFields = unknownFieldSet;
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public UnknownFieldSet toImmutable(UnknownFieldSet.Builder builder) {
+        return builder.build();
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public void writeAsMessageSetTo(UnknownFieldSet unknownFieldSet, Writer writer) {
+        unknownFieldSet.writeAsMessageSetTo(writer);
+    }
+
+    /* JADX DEBUG: Method merged with bridge method */
+    @Override // com.google.protobuf.UnknownFieldSchema
+    public void writeTo(UnknownFieldSet unknownFieldSet, Writer writer) {
+        unknownFieldSet.writeTo(writer);
+    }
+}

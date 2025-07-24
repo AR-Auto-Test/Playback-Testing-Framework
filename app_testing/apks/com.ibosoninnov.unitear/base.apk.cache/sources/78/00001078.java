@@ -1,0 +1,66 @@
+package com.google.android.gms.internal.clearcut;
+
+import java.util.ListIterator;
+
+/* loaded from: classes.dex */
+public final class zzfb implements ListIterator<String> {
+    private ListIterator<String> zzpc;
+    private final /* synthetic */ int zzpd;
+    private final /* synthetic */ zzfa zzpe;
+
+    public zzfb(zzfa zzfaVar, int i) {
+        zzcx zzcxVar;
+        this.zzpe = zzfaVar;
+        this.zzpd = i;
+        zzcxVar = zzfaVar.zzpb;
+        this.zzpc = zzcxVar.listIterator(i);
+    }
+
+    /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Object] */
+    @Override // java.util.ListIterator
+    public final /* synthetic */ void add(String str) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override // java.util.ListIterator, java.util.Iterator
+    public final boolean hasNext() {
+        return this.zzpc.hasNext();
+    }
+
+    @Override // java.util.ListIterator
+    public final boolean hasPrevious() {
+        return this.zzpc.hasPrevious();
+    }
+
+    @Override // java.util.ListIterator, java.util.Iterator
+    public final /* synthetic */ Object next() {
+        return this.zzpc.next();
+    }
+
+    @Override // java.util.ListIterator
+    public final int nextIndex() {
+        return this.zzpc.nextIndex();
+    }
+
+    /* JADX DEBUG: Return type fixed from 'java.lang.Object' to match base method */
+    @Override // java.util.ListIterator
+    public final /* synthetic */ String previous() {
+        return this.zzpc.previous();
+    }
+
+    @Override // java.util.ListIterator
+    public final int previousIndex() {
+        return this.zzpc.previousIndex();
+    }
+
+    @Override // java.util.ListIterator, java.util.Iterator
+    public final void remove() {
+        throw new UnsupportedOperationException();
+    }
+
+    /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Object] */
+    @Override // java.util.ListIterator
+    public final /* synthetic */ void set(String str) {
+        throw new UnsupportedOperationException();
+    }
+}

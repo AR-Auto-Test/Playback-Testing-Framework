@@ -1,0 +1,39 @@
+package com.google.android.play.core.internal;
+
+import android.content.Context;
+import android.os.LocaleList;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
+/* compiled from: com.google.android.play:core@@1.10.3 */
+/* loaded from: classes.dex */
+public final class zzcf {
+    private final Context zza;
+
+    public zzcf(Context context) {
+        this.zza = context;
+    }
+
+    private static String zzb(Locale locale) {
+        String concat;
+        String valueOf = String.valueOf(locale.getLanguage());
+        if (locale.getCountry().isEmpty()) {
+            concat = "";
+        } else {
+            String valueOf2 = String.valueOf(locale.getCountry());
+            concat = valueOf2.length() != 0 ? "_".concat(valueOf2) : new String("_");
+        }
+        String valueOf3 = String.valueOf(concat);
+        return valueOf3.length() != 0 ? valueOf.concat(valueOf3) : new String(valueOf);
+    }
+
+    public final List zza() {
+        LocaleList locales = this.zza.getResources().getConfiguration().getLocales();
+        ArrayList arrayList = new ArrayList(locales.size());
+        for (int i = 0; i < locales.size(); i++) {
+            arrayList.add(zzb(locales.get(i)));
+        }
+        return arrayList;
+    }
+}
