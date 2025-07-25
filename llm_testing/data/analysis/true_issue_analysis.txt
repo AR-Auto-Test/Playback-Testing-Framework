@@ -1,0 +1,759 @@
+============================================================
+AR True Issue and Bug Statistical Analysis Report (Multi-Mode)
+============================================================
+
+== Working Mode ==
+Mode 5 (101): human_label + prediction
+
+== Data Overview ==
+Human annotation total issues: 636
+Prediction total issues: 596
+True issues total (selected data sources consistent): 190
+
+Total video count: 880
+Videos with bugs found: 181
+Videos without bugs: 699
+Bug detection rate: 20.57%
+
+== True Issues Statistics by Metric ==
+Object Placement: 144 true issues
+Object Movement: 0 true issues
+Occlusion: 1 true issues
+Lighting: 26 true issues
+Visual Artifacts and Rendering Issues: 2 true issues
+Black Screen: 17 true issues
+
+== Details of Videos with Bugs ==
+Video: bedroom_low_small_indoor_20240504_193037_sample_3.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: class_medium_big_indoor_20240430_125628_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: class_medium_big_indoor_20240430_125628_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: class_medium_big_indoor_20240430_125628_sample_9.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: class_medium_big_indoor_20240502_160545_sample_11.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: class_medium_big_indoor_20240502_160545_sample_12.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: class_medium_big_indoor_20240502_160545_sample_13.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: class_medium_big_indoor_20240502_160545_sample_14.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: class_medium_big_indoor_20240502_160545_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: class_medium_big_indoor_20240503_115515_sample_10.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: class_medium_big_indoor_20240503_115515_sample_12.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: class_medium_big_indoor_20240503_115515_sample_4.mp4
+  True issue count: 2
+  Involved metrics: Lighting, Object Placement
+
+Video: class_medium_big_indoor_20240503_115515_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: class_medium_big_indoor_20240503_115515_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: class_medium_big_indoor_20240504_185604_sample_11.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: class_medium_big_indoor_20240504_185604_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: class_medium_big_indoor_20240504_185604_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: class_medium_big_indoor_20240504_185604_sample_8.mp4
+  True issue count: 2
+  Involved metrics: Black Screen, Object Placement
+
+Video: class_medium_big_indoor_20240504_185604_sample_9.mp4
+  True issue count: 2
+  Involved metrics: Black Screen, Object Placement
+
+Video: club_medium_medium_outdoor_20240501_165156_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: club_medium_medium_outdoor_20240503_000521_sample_3.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: club_medium_medium_outdoor_20240506_133542_sample_1.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: club_medium_medium_outdoor_20240506_133542_sample_2.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: club_medium_medium_outdoor_20240506_133542_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: club_medium_medium_outdoor_20240506_133542_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: clubhouse_bright_medium_indoor_20240429_185805_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: clubhouse_bright_medium_indoor_20240504_191913_sample_2.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: clubhouse_bright_medium_indoor_20240504_191913_sample_3.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: clubhouse_medium_big_indoor_20240429_185926_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: clubhouse_medium_big_indoor_20240502_232514_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: clubhouse_medium_big_indoor_20240504_192039_sample_3.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: gym_medium_small_indoor_20240504_192448_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: hall_low_small_indoor_20240430_210025_sample_10.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240430_210025_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240430_210025_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240430_210025_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240430_210025_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240501_164244_sample_10.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240501_164244_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240501_164244_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240501_164244_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240503_121811_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: hall_low_small_indoor_20240503_121811_sample_9.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240506_003118_sample_12.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240506_003118_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240506_003118_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240506_003118_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240506_003118_sample_9.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_20240506_132708_sample_10.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: hall_low_small_indoor_20240506_132708_sample_9.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_vertical_20240503_121849_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_vertical_20240506_003203_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_vertical_20240506_003203_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_vertical_20240506_003203_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_low_small_indoor_vertical_20240506_003203_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_big_indoor_20240502_160058_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_big_indoor_20240502_160058_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_big_indoor_20240502_160058_sample_9.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_big_indoor_20240503_115102_sample_2.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_big_indoor_20240503_115102_sample_4.mp4
+  True issue count: 2
+  Involved metrics: Object Placement, Lighting
+
+Video: hall_medium_big_indoor_20240503_115102_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_big_indoor_20240503_115102_sample_6.mp4
+  True issue count: 2
+  Involved metrics: Lighting, Object Placement
+
+Video: hall_medium_big_indoor_20240503_115102_sample_7.mp4
+  True issue count: 2
+  Involved metrics: Lighting, Object Placement
+
+Video: hall_medium_big_indoor_20240504_185130_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: hall_medium_big_indoor_20240504_185130_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_big_indoor_20240504_185130_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: hall_medium_small_indoor_sofa_20240503_121946_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: hall_medium_small_indoor_sofa_20240504_193326_sample_10.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_small_indoor_sofa_20240504_193326_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: hall_medium_small_indoor_sofa_20240504_193326_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: hall_medium_small_indoor_sofa_20240506_003314_sample_12.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_small_indoor_sofa_20240506_003314_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_small_indoor_sofa_20240506_132844_sample_10.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_small_indoor_table_20240430_210254_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Visual Artifacts and Rendering Issues
+
+Video: hall_medium_small_indoor_table_20240430_210254_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Visual Artifacts and Rendering Issues
+
+Video: hall_medium_small_indoor_table_20240430_210254_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_small_indoor_table_20240504_193430_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_small_indoor_table_20240506_003433_sample_12.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_small_indoor_table_20240506_003433_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_small_indoor_table_20240506_132949_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hall_medium_small_indoor_table_20240506_132949_sample_6.mp4
+  True issue count: 2
+  Involved metrics: Object Placement, Lighting
+
+Video: hall_medium_small_indoor_table_20240506_132949_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hallway_bright_medium_indoor_20240502_232615_sample_3.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hallway_bright_medium_indoor_20240502_232615_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: hallway_bright_medium_indoor_20240502_232615_sample_9.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: rit_medium_medium_indoor_20240502_232733_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: rit_medium_medium_indoor_20240502_232733_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: rit_medium_medium_outdoor_20240501_165257_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: rit_medium_medium_outdoor_20240503_000636_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: rit_medium_medium_outdoor_20240503_000636_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: rit_medium_medium_outdoor_20240503_000636_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: rit_medium_medium_outdoor_20240506_133648_sample_2.mp4
+  True issue count: 2
+  Involved metrics: Object Placement, Occlusion
+
+Video: ritflat_low_medium_outdoor_20240429_195147_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritflat_low_medium_outdoor_20240429_195147_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritflat_low_medium_outdoor_20240430_211940_sample_2.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritflat_low_medium_outdoor_20240430_211940_sample_3.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritflat_low_medium_outdoor_20240430_211940_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritflat_low_medium_outdoor_20240501_165225_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritflat_low_medium_outdoor_20240506_133615_sample_3.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritgarden_bright_big_outdoor_20240430_213018_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: ritgarden_bright_big_outdoor_20240501_213231_sample_3.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: ritgarden_bright_big_outdoor_20240501_213231_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: ritgym_low_big_outdoor_20240429_200718_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritgym_low_big_outdoor_20240429_200718_sample_9.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritgym_low_big_outdoor_20240430_213050_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritgym_low_big_outdoor_20240430_213050_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritgym_low_big_outdoor_20240501_213303_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritgym_low_big_outdoor_20240502_235810_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritgym_low_big_outdoor_20240506_134448_sample_3.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritgym_low_big_outdoor_20240506_134448_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritgym_low_big_outdoor_20240506_134448_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritgym_low_big_outdoor_20240506_134448_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritntid_medium_medium_indoor_20240429_190123_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritntid_medium_medium_indoor_20240504_192225_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: ritntid_medium_medium_indoor_20240504_192225_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: ritparking2_low_big_outdoor_20240429_200805_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: ritparking2_low_big_outdoor_20240430_213120_sample_2.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: ritparking2_low_big_outdoor_20240430_213120_sample_3.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: ritparking2_low_big_outdoor_20240501_213332_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: ritroom_low_big_indoor_20240429_175959_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritroom_low_big_indoor_20240430_125514_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritroom_low_big_indoor_20240502_160415_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritroom_low_big_indoor_20240503_115358_sample_4.mp4
+  True issue count: 2
+  Involved metrics: Object Placement, Lighting
+
+Video: ritroom_low_big_indoor_20240504_185443_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: ritslab2_low_big_outdoor_20240501_213508_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: rittable_low_small_outdoor_20240430_211503_sample_2.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: rittable_medium_medium_indoor_20240504_192943_sample_2.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: rittiger_low_small_outdoor_20240430_211526_sample_3.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sau_medium_big_indoor_20240429_175750_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sau_medium_big_indoor_20240502_160228_sample_12.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sau_medium_big_indoor_20240502_160228_sample_13.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sau_medium_big_indoor_20240502_160228_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sau_medium_big_indoor_20240502_160228_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sau_medium_big_indoor_20240502_160228_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sau_medium_big_indoor_20240502_160228_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sau_medium_big_indoor_20240502_160228_sample_9.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sau_medium_big_indoor_20240503_115226_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sau_medium_big_indoor_20240504_185300_sample_13.mp4
+  True issue count: 1
+  Involved metrics: Black Screen
+
+Video: sdc_medium_big_indoor_20240429_175919_sample_10.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240429_175919_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240429_175919_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240429_175919_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240430_125447_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Lighting
+
+Video: sdc_medium_big_indoor_20240430_125447_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240501_172932_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240501_172932_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240502_160339_sample_10.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240502_160339_sample_11.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240502_160339_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240502_160339_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240502_160339_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240502_160339_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240502_160339_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240502_160339_sample_9.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240503_115330_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240503_115330_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240503_115330_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240503_115330_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240503_115330_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240503_115330_sample_9.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240504_195333_sample_10.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240504_195333_sample_11.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: sdc_medium_big_indoor_20240504_195333_sample_12.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240430_210420_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240430_210420_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240430_210420_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240501_164640_sample_3.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240501_164640_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240501_164640_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240504_193611_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240504_193611_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240506_003628_sample_11.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240506_133126_sample_11.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240506_133126_sample_3.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240506_133126_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240506_133126_sample_5.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240506_133126_sample_6.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240506_133126_sample_7.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: small_medium_small_indoor_vertical_20240506_133126_sample_9.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: studyroom_low_medium_indoor_20240502_232829_sample_8.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+Video: terrace_low_big_outdoor_20240506_134757_sample_4.mp4
+  True issue count: 1
+  Involved metrics: Object Placement
+
+== Data Consistency Analysis ==
+True issues as percentage of human annotations: 29.87%
+True issues as percentage of predictions: 31.88%
+
+== Summary ==
+This analysis is based on Mode 5 (101): human_label + prediction
+Requires selected data sources (human_gt & prediction) all mark as issue
+Identified 190 true issues, involving 181 videos
+This indicates that among 880 test videos, 181 videos have reliable AR quality issues
